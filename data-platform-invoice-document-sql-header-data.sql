@@ -17,13 +17,14 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `TransactionCurrency`        varchar(5) DEFAULT NULL,
     `TaxAmount`                  varchar(11) DEFAULT NULL,
     `TotalGrossAmount`           varchar(11) DEFAULT NULL,
-    `IncotermsClassification`    varchar(3) DEFAULT NULL,
+    `Incoterms`                  varchar(3) DEFAULT NULL,     -- 名称変更
     `PaymentTerms`               varchar(4) DEFAULT NULL,     -- 名称変更
     `DueCalculationBaseDate`     varchar(80) DEFAULT NULL,    -- 新規追加
     `NetPaymentDays`             int(3) DEFAULT NULL,         -- 新規追加
     `PaymentMethod`              int(1) DEFAULT NULL,
     `PaymentBlockingReason`      tinyint(1) DEFAULT NULL,
     `ExternalReferenceDocument`　varchar(35) DEFAULT NULL,    -- 新規追加
+    `BillToParty`                int(10) DEFAULT NULL,        -- 新規追加
     `SoldToParty`                int(10) DEFAULT NULL,
     `SupplyFromParty`            int(10) DEFAULT NULL,        -- 新規追加
     `DeliverToParty`             int(10) DEFAULT NULL,        -- 新規追加
