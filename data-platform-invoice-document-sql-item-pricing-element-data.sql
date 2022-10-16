@@ -3,7 +3,7 @@ CREATE TABLE `data_platform_invoice_document_item_pricing_element_data`  -- 名�
   `BusinessPartner`             int(10) NOT NULL,          -- 新規追加
   `InvoiceDocument`             int(10) NOT NULL,          -- 名称変更
   `InvoiceDocumentItem`         int(6) NOT NULL,           -- 名称変更
-  `PricingProcedureStep`        varchar(3) NOT NULL,
+  `PricingProcedureStep`        int(3) NOT NULL,
   `PricingProcedureCounter`     int(3) NOT NULL,
   `ConditionType`               varchar(4) DEFAULT NULL,
   `PricingDate`                 varchar(80) DEFAULT NULL,  -- 名称変更

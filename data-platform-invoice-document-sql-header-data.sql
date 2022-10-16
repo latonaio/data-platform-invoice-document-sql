@@ -22,7 +22,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `PaymentTerms`               varchar(4) DEFAULT NULL,     -- 名称変更
     `DueCalculationBaseDate`     varchar(80) DEFAULT NULL,    -- 新規追加
     `NetPaymentDays`             int(3) DEFAULT NULL,         -- 新規追加
-    `PaymentMethod`              int(1) DEFAULT NULL,
+    `PaymentMethod`              varchar(1) DEFAULT NULL,
     `PaymentBlockingReason`      tinyint(1) DEFAULT NULL,
     `ExternalReferenceDocument`　varchar(35) DEFAULT NULL,    -- 新規追加
     `BillToParty`                int(10) DEFAULT NULL,        -- 新規追加
@@ -32,7 +32,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `DocumentHeaderText`         varchar(200) DEFAULT NULL,   -- 新規追加
     `AddressID`                  int(10) DEFAULT NULL,        -- 新規追加
     `Country`                    varchar(3) DEFAULT NULL,
-    `Region`                     varchar(3) DEFAULT NULL,
+    `LocalRegion`                varchar(3) DEFAULT NULL,
     PRIMARY KEY (`BusinessPartner`, `InvoiceDocument`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

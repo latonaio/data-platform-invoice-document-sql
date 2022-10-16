@@ -39,6 +39,9 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `Project`                        varchar(24) DEFAULT NULL,
     `OrderID`                        int(10) DEFAULT NULL,       -- 新規追加
     `OrderItem`                      int(6) DEFAULT NULL,        -- 新規追加
+    `OrderType`                      varchar(3) DEFAULT NULL,        -- 新規追加
+    `DeliveryDocument`               int(10) DEFAULT NULL,       -- 新規追加
+    `DeliveryDocumentItem`           int(6) DEFAULT NULL,        -- 新規追加
     `OriginDocument`                 int(10) DEFAULT NULL,
     `OriginDocumentItem`             int(6) DEFAULT NULL,
     `ReferenceDocument`              int(10) DEFAULT NULL,
