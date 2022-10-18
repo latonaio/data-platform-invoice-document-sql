@@ -9,10 +9,12 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `PurchaseOrganization`       varchar(4) DEFAULT NULL,     -- 新規追加
     `DistributionChannel`        varchar(2) DEFAULT NULL,
     `Division`                   varchar(2) DEFAULT NULL,
+    `BillToParty`                int(10) DEFAULT NULL,
     `InvoiceDocumentDate`        varchar(80) DEFAULT NULL,    -- 名称変更
     `InvoiceDocumentTime`        varchar(80) DEFAULT NULL,    -- 新規追加
     `InvoicePeriodStartDate`     varchar(80) DEFAULT NULL,    -- 新規追加
     `InvoicePeriodEndDate`       varchar(80) DEFAULT NULL,    -- 新規追加
+    `AccountingPostingDate`      varchar(80) DEFAULT NULL,    -- 新規追加
     `InvoiceDocumentIsCancelled` tinyint(1) DEFAULT NULL,     -- 名称変更
     `CancelledInvoiceDocument`   int(10) DEFAULT NULL,        -- 名称変更
     `IsExportDelivery`           tinyint(1) DEFAULT NULL,
@@ -28,10 +30,6 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `PaymentMethod`              varchar(1) DEFAULT NULL,
     `PaymentBlockingReason`      tinyint(1) DEFAULT NULL,
     `ExternalReferenceDocument`　varchar(35) DEFAULT NULL,    -- 新規追加
-    `BillToParty`                int(10) DEFAULT NULL,        -- 新規追加
-    `SoldToParty`                int(10) DEFAULT NULL,
-    `SupplyFromParty`            int(10) DEFAULT NULL,        -- 新規追加
-    `DeliverToParty`             int(10) DEFAULT NULL,        -- 新規追加
     `DocumentHeaderText`         varchar(200) DEFAULT NULL,   -- 新規追加
     `AddressID`                  int(10) DEFAULT NULL,        -- 新規追加
     `Country`                    varchar(3) DEFAULT NULL,

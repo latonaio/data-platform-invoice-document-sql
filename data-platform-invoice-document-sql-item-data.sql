@@ -7,6 +7,10 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `CreationDate`                   varchar(80) DEFAULT NULL,
     `CreationTime`                   varchar(80) DEFAULT NULL,
     `Division`                       varchar(2) DEFAULT NULL,
+    `Customer`                       int(10) DEFAULT NULL,
+    `Supplier`                       int(10) DEFAULT NULL,     -- 新規追加
+    `DeliverToParty`                 int(10) DEFAULT NULL,     -- 新規追加
+    `DeliverFromParty`               int(10) DEFAULT NULL,     -- 新規追加
     `ProductStandardID`              varchar(18) DEFAULT NULL, -- 新規追加
     `Batch`                          varchar(10) DEFAULT NULL,
     `Product`                        varchar(40) DEFAULT NULL, -- 名称変更
