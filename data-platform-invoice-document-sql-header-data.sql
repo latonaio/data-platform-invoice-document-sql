@@ -11,6 +11,8 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `Division`                   varchar(2) DEFAULT NULL,
     `InvoiceDocumentDate`        varchar(80) DEFAULT NULL,    -- 名称変更
     `InvoiceDocumentTime`        varchar(80) DEFAULT NULL,    -- 新規追加
+    `InvoicePeriodStartDate`     varchar(80) DEFAULT NULL,    -- 新規追加
+    `InvoicePeriodEndDate`       varchar(80) DEFAULT NULL,    -- 新規追加
     `InvoiceDocumentIsCancelled` tinyint(1) DEFAULT NULL,     -- 名称変更
     `CancelledInvoiceDocument`   int(10) DEFAULT NULL,        -- 名称変更
     `IsExportDelivery`           tinyint(1) DEFAULT NULL,
