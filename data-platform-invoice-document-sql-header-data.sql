@@ -18,6 +18,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `IsExportDelivery`           tinyint(1) DEFAULT NULL,
     `TotalNetAmount`             varchar(11) DEFAULT NULL,
     `TransactionCurrency`        varchar(5) DEFAULT NULL,
+    `BusinessPartnerCurrency`    varchar(5) DEFAULT NULL,     -- 新規追加
     `TaxAmount`                  varchar(11) DEFAULT NULL,
     `TotalGrossAmount`           varchar(11) DEFAULT NULL,
     `Incoterms`                  varchar(3) DEFAULT NULL,     -- 名称変更

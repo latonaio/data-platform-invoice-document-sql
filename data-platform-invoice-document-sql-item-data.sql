@@ -30,6 +30,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `Region`                         varchar(3) DEFAULT NULL,　 -- 名称変更
     `NetAmount`                      varchar(17) DEFAULT NULL,
     `TransactionCurrency`            varchar(5) DEFAULT NULL,
+    `BusinessPartnerCurrency`        varchar(5) DEFAULT NULL,　 -- 新規追加
     `GrossAmount`                    varchar(17) DEFAULT NULL,
     `PricingDate`                    varchar(80) DEFAULT NULL,
     `TaxAmount`                      varchar(17) DEFAULT NULL,
