@@ -5,11 +5,8 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `InvoiceDocumentType`        varchar(2) DEFAULT NULL,     -- 名称変更
     `CreationDate`               varchar(80) DEFAULT NULL,
     `LastChangeDate`             varchar(80) DEFAULT NULL,
-    `SalesOrganization`          varchar(4) DEFAULT NULL,
-    `PurchaseOrganization`       varchar(4) DEFAULT NULL,     -- 新規追加
-    `DistributionChannel`        varchar(2) DEFAULT NULL,
-    `Division`                   varchar(2) DEFAULT NULL,
     `BillToParty`                int(10) DEFAULT NULL,
+    `BillFromParty`              int(10) DEFAULT NULL,        -- 新規追加
     `InvoiceDocumentDate`        varchar(80) DEFAULT NULL,    -- 名称変更
     `InvoiceDocumentTime`        varchar(80) DEFAULT NULL,    -- 新規追加
     `InvoicePeriodStartDate`     varchar(80) DEFAULT NULL,    -- 新規追加
@@ -31,9 +28,12 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `PaymentBlockingReason`      tinyint(1) DEFAULT NULL,
     `ExternalReferenceDocument`　varchar(35) DEFAULT NULL,    -- 新規追加
     `DocumentHeaderText`         varchar(200) DEFAULT NULL,   -- 新規追加
-    `AddressID`                  int(10) DEFAULT NULL,        -- 新規追加
-    `Country`                    varchar(3) DEFAULT NULL,
-    `LocalRegion`                varchar(3) DEFAULT NULL,
+    `BillToAddressID`            int(10) DEFAULT NULL,        -- 新規追加
+    `BillFromAddressID`          int(10) DEFAULT NULL,        -- 新規追加
+    `BillToCountry`              varchar(3) DEFAULT NULL,     -- 名称変更
+    `BillToLocalRegion`          varchar(3) DEFAULT NULL,     -- 名称変更
+    `BillFromCountry`            varchar(3) DEFAULT NULL,     -- 新規追加
+    `BillFromLocalRegion`        varchar(3) DEFAULT NULL,     -- 新規追加
     PRIMARY KEY (`BusinessPartner`, `InvoiceDocument`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

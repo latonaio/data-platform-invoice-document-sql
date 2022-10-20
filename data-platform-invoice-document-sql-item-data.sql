@@ -30,8 +30,6 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `ItemWeightUnit`                 varchar(3) DEFAULT NULL,　 -- 新規追加
     `ItemVolume`                     varchar(17) DEFAULT NULL,　-- 新規追加
     `ItemVolumeUnit`                 varchar(3) DEFAULT NULL,　 -- 新規追加
-    `Country`                        varchar(3) DEFAULT NULL,　 -- 名称変更
-    `Region`                         varchar(3) DEFAULT NULL,　 -- 名称変更
     `NetAmount`                      varchar(17) DEFAULT NULL,
     `TransactionCurrency`            varchar(5) DEFAULT NULL,
     `BusinessPartnerCurrency`        varchar(5) DEFAULT NULL,　 -- 新規追加
