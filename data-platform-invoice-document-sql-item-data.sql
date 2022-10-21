@@ -25,6 +25,10 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `InvoiceQuantityUnit`            varchar(3) DEFAULT NULL,
     `InvoiceQuantityInBaseUnit`      varchar(13) DEFAULT NULL,
     `BaseUnit`                       varchar(3) DEFAULT NULL,
+    `ActualGoodsIssueDate`           varchar(80) DEFAULT NULL, -- 新規追加
+    `ActualGoodsIssueTime`           varchar(80) DEFAULT NULL, -- 新規追加
+    `ActualGoodsReceiptDate`         varchar(80) DEFAULT NULL, -- 新規追加
+    `ActualGoodsReceiptTime`         varchar(80) DEFAULT NULL, -- 新規追加
     `ItemGrossWeight`                varchar(17) DEFAULT NULL,　-- 新規追加
     `ItemNetWeight`                  varchar(17) DEFAULT NULL,　-- 新規追加
     `ItemWeightUnit`                 varchar(3) DEFAULT NULL,　 -- 新規追加
