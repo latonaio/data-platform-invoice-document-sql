@@ -9,15 +9,13 @@ https://api.xxx.com/api/API_XXXXX_XXX/overview
 data-platform-invoice-document-sql には、sqlの設定ファイルとして、以下のファイルが含まれています。  
 
 * data-platform-invoice-document-sql-header-data.sql（データ連携基盤 請求伝票 - ヘッダデータ）
-* data-platform-invoice-document-sql-header-bill-to-contact-data.sql（データ連携基盤 請求伝票 - ヘッダ請求先コンタクトデータ）
-* data-platform-invoice-document-sql-header-bill-from-contact-data.sql（データ連携基盤 請求伝票 - ヘッダ請求元コンタクトデータ）
+* data-platform-invoice-document-sql-header-pdf-data.sql（データ連携基盤 請求伝票 - ヘッダPDFデータ）
 * data-platform-invoice-document-sql-header-partner-data.sql（データ連携基盤 請求伝票 - ヘッダ取引先データ）
 * data-platform-invoice-document-sql-header-partner-contact-data.sql（データ連携基盤 請求伝票 - ヘッダ取引先コンタクトデータ）
-* data-platform-invoice-document-sql-header-pdf-data.sql（データ連携基盤 請求伝票 - ヘッダPDFデータ）
 * data-platform-invoice-document-sql-item-data.sql（データ連携基盤 請求伝票 - 明細データ）
 * data-platform-invoice-document-sql-item-partner-data.sql（データ連携基盤 請求伝票 - 明細取引先データ）
 * data-platform-invoice-document-sql-item-pricing-element-data.sql（データ連携基盤 請求伝票 - 明細価格決定要素データ）
-* data-platform-invoice-document-sql-partner-address-data.sql（データ連携基盤 請求伝票 - 取引先住所データ）
+* data-platform-invoice-document-sql-address-data.sql（データ連携基盤 請求伝票 - 住所データ）
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法
 MySQLのセットアップ / Kubernetesの設定 / 具体的なSQLテーブルの作成方法、については、[mysql-kube](https://github.com/latonaio/mysql-kube)を参照ください。
