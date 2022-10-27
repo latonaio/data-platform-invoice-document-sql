@@ -39,13 +39,13 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `ItemWeightUnit`                 varchar(3) DEFAULT NULL,　 -- 新規追加
     `ItemVolume`                     float(17) DEFAULT NULL,　  -- 新規追加
     `ItemVolumeUnit`                 varchar(3) DEFAULT NULL,　 -- 新規追加
-    `NetAmount`                      float(17) DEFAULT NULL,
+    `NetAmount`                      float(13) DEFAULT NULL,
+    `TaxAmount`                      float(13) DEFAULT NULL,
+    `GrossAmount`                    float(13) DEFAULT NULL,
     `GoodsIssueOrReceiptSlipNumber`  varchar(35) DEFAULT NULL,
     `TransactionCurrency`            varchar(5) DEFAULT NULL,
     `BusinessPartnerCurrency`        varchar(5) DEFAULT NULL,　 -- 新規追加
-    `GrossAmount`                    float(13) DEFAULT NULL,
     `PricingDate`                    date DEFAULT NULL,
-    `TaxAmount`                      float(13) DEFAULT NULL,
     `ProductTaxClassification`       varchar(1) DEFAULT NULL,
 --  `ProfitCenter`                   varchar(10) DEFAULT NULL,
     `Project`                        varchar(24) DEFAULT NULL,

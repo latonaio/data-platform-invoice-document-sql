@@ -1,8 +1,7 @@
 CREATE TABLE `data_platform_invoice_document_header_partner_data` -- 名称変更
 (
---  `BusinessPartner`                 int(10) NOT NULL,           -- 新規追加
     `InvoiceDocument`                 int(16) NOT NULL,           -- 名称変更
-    `PartnerFunction`                 varchar(4) NOT NULL,
+    `PartnerFunction`                 varchar(40) NOT NULL,
     `BusinessPartner`                 int(12) NOT NULL,           -- 新規追加
     `BusinessPartnerFullName`         varchar(200) DEFAULT NULL,  -- 新規追加
     `BusinessPartnerName`             varchar(100) DEFAULT NULL,  -- 新規追加

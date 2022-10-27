@@ -18,17 +18,17 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     `CancelledInvoiceDocument`   int(16) DEFAULT NULL,        -- 名称変更
     `IsExportDelivery`           tinyint(1) DEFAULT NULL,
     `TotalNetAmount`             float(13) DEFAULT NULL,
-    `TransactionCurrency`        varchar(5) DEFAULT NULL,
-    `BusinessPartnerCurrency`    varchar(5) DEFAULT NULL,     -- 新規追加
     `TotalTaxAmount`             float(13) DEFAULT NULL,
     `TotalGrossAmount`           float(13) DEFAULT NULL,
+    `TransactionCurrency`        varchar(5) DEFAULT NULL,
+    `BusinessPartnerCurrency`    varchar(5) DEFAULT NULL,     -- 新規追加
     `Incoterms`                  varchar(3) DEFAULT NULL,     -- 名称変更
     `PaymentTerms`               varchar(4) DEFAULT NULL,     -- 名称変更
     `DueCalculationBaseDate`     date DEFAULT NULL,           -- 新規追加
     `NetPaymentDays`             int(3) DEFAULT NULL,         -- 新規追加
     `PaymentMethod`              varchar(1) DEFAULT NULL,
     `PaymentBlockingReason`      tinyint(1) DEFAULT NULL,
-    `ExternalReferenceDocument`　varchar(35) DEFAULT NULL,    -- 新規追加
+    `ExternalReferenceDocument`  varchar(35) DEFAULT NULL,    -- 新規追加
     `DocumentHeaderText`         varchar(200) DEFAULT NULL,   -- 新規追加
     `BillToAddressID`            int(12) DEFAULT NULL,        -- 新規追加
     `BillFromAddressID`          int(12) DEFAULT NULL,        -- 新規追加
@@ -45,7 +45,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`     -- 名称変更
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataIncoterms_fk` FOREIGN KEY (`Incoterms`) REFERENCES `data_platform_incoterms_incoterms_data` (`Incoterms`),
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataPaymentTerms_fk` FOREIGN KEY (`PaymentTerms`) REFERENCES `data_platform_payment_terms_payment_terms_data` (`PaymentTerms`),
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataPaymentMethod_fk` FOREIGN KEY (`PaymentMethod`) REFERENCES `data_platform_payment_method_payment_method_data` (`PaymentMethod`),
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataBillToAddressID_fk` FOREIGN KEY (`BillToAddressID`, `BillFromAddressID`, `BillToCountry`, `BillToLocalRegion`, `BillFromCountry`, `BillFromLocalRegion`) REFERENCES `data_platform_business_partner_address_data` (`AddressID`, `AddressID`, `Country`, `Country`, `LocalRegion`, `LocalRegion`)
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataBillToAddressID_fk` FOREIGN KEY (`BillToAddressID`, `BillFromAddressID`, `BillToCountry`, `BillToLocalRegion`, `BillFromCountry`, `BillFromLocalRegion`) REFERENCES `data_platform_address_address_data` (`AddressID`, `AddressID`, `Country`, `Country`, `LocalRegion`, `LocalRegion`)
     
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

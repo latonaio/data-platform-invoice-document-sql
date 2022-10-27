@@ -1,12 +1,11 @@
-CREATE TABLE `data_platform_invoice_document_item_pricing_element_data`  -- 名称変更
+CREATE TABLE `data_platform_invoice_document_item_pricing_element_data`
 (
---`BusinessPartner`             int(10) NOT NULL,          -- 新規追加
-  `InvoiceDocument`             int(16) NOT NULL,          -- 名称変更
-  `InvoiceDocumentItem`         int(6) NOT NULL,           -- 名称変更
+  `InvoiceDocument`             int(16) NOT NULL,
+  `InvoiceDocumentItem`         int(6) NOT NULL,
   `PricingProcedureStep`        int(3) NOT NULL,
   `PricingProcedureCounter`     int(3) NOT NULL,
   `ConditionType`               varchar(4) DEFAULT NULL,
-  `PricingDate`                 date DEFAULT NULL,         -- 名称変更
+  `PricingDate`                 date DEFAULT NULL,
   `ConditionRateValue`          float(13) DEFAULT NULL,
   `ConditionCurrency`           varchar(5) DEFAULT NULL,
   `ConditionQuantity`           float(6) DEFAULT NULL,
@@ -17,7 +16,10 @@ CREATE TABLE `data_platform_invoice_document_item_pricing_element_data`  -- 名�
   `ConditionAmount`             float(13) DEFAULT NULL,
   `TransactionCurrency`         varchar(5) DEFAULT NULL,
   `ConditionIsManuallyChanged`  tinyint(1) DEFAULT NULL,
-    PRIMARY KEY (`InvoiceDocument`, `InvoiceDocumentItem`, `PricingProcedureStep`, `PricingProcedureCounter`),
-    CONSTRAINT `DataPlatformInvoiceDocumentItemPricingElementData_fk` FOREIGN KEY (`InvoiceDocument`, `InvoiceDocumentItem`) REFERENCES `data_platform_invoice_document_item_data` (`InvoiceDocument`, `InvoiceDocumentItem`)
+  
+  PRIMARY KEY (`InvoiceDocument`, `InvoiceDocumentItem`, `PricingProcedureStep`, `PricingProcedureCounter`),
+    
+  CONSTRAINT `DataPlatformInvoiceDocumentItemPricingElementData_fk` FOREIGN KEY (`InvoiceDocument`, `InvoiceDocumentItem`) REFERENCES `data_platform_invoice_document_item_data` (`InvoiceDocument`, `InvoiceDocumentItem`)
+
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
