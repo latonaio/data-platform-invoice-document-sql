@@ -13,6 +13,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`
     `InvoiceDocumentIsCancelled` tinyint(1) DEFAULT NULL,
     `CancelledInvoiceDocument`   int(16) DEFAULT NULL,
     `IsExportDelivery`           tinyint(1) DEFAULT NULL,
+    `HeaderBillingConfStatus`    varchar(2) DEFAULT NULL,
     `TotalNetAmount`             float(13) DEFAULT NULL,
     `TotalTaxAmount`             float(13) DEFAULT NULL,
     `TotalGrossAmount`           float(13) DEFAULT NULL,

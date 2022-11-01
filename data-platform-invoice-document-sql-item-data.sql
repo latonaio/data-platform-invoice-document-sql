@@ -6,6 +6,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `InvoiceDocumentItemText`        varchar(200) DEFAULT NULL,
     `CreationDate`                   date DEFAULT NULL,
     `CreationTime`                   time DEFAULT NULL,
+    `ItemBillingConfStatus`          varchar(2) DEFAULT NULL,
     `BusinessArea`                   varchar(4) DEFAULT NULL,
     `Buyer`                          int(12) DEFAULT NULL,
     `Seller`                         int(12) DEFAULT NULL,
