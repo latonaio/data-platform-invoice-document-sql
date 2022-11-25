@@ -26,7 +26,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`
     `DueCalculationBaseDate`     date DEFAULT NULL,
     `NetPaymentDays`             int(3) DEFAULT NULL,
     `PaymentMethod`              varchar(1) DEFAULT NULL,
-    `PaymentBlockingReason`      tinyint(1) DEFAULT NULL,
+    `HeaderPaymentBlockStatus`   tinyint(1) DEFAULT NULL,
     `ExternalReferenceDocument`  varchar(35) DEFAULT NULL,
     `DocumentHeaderText`         varchar(200) DEFAULT NULL,
     
