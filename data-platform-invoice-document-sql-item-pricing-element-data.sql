@@ -2,7 +2,6 @@ CREATE TABLE `data_platform_invoice_document_item_pricing_element_data`
 (
   `InvoiceDocument`             int(16) NOT NULL,
   `InvoiceDocumentItem`         int(6) NOT NULL,
-  `PricingProcedureStep`        int(3) NOT NULL,
   `PricingProcedureCounter`     int(3) NOT NULL,
   `ConditionType`               varchar(4) DEFAULT NULL,
   `PricingDate`                 date DEFAULT NULL,
@@ -17,7 +16,7 @@ CREATE TABLE `data_platform_invoice_document_item_pricing_element_data`
   `TransactionCurrency`         varchar(5) DEFAULT NULL,
   `ConditionIsManuallyChanged`  tinyint(1) DEFAULT NULL,
   
-  PRIMARY KEY (`InvoiceDocument`, `InvoiceDocumentItem`, `PricingProcedureStep`, `PricingProcedureCounter`),
+  PRIMARY KEY (`InvoiceDocument`, `InvoiceDocumentItem`, `PricingProcedureCounter`),
     
   CONSTRAINT `DataPlatformInvoiceDocumentItemPricingElementData_fk` FOREIGN KEY (`InvoiceDocument`, `InvoiceDocumentItem`) REFERENCES `data_platform_invoice_document_item_data` (`InvoiceDocument`, `InvoiceDocumentItem`)
 

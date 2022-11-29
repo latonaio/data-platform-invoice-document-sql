@@ -26,7 +26,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`
     `DueCalculationBaseDate`     date DEFAULT NULL,
     `NetPaymentDays`             int(3) DEFAULT NULL,
     `PaymentMethod`              varchar(1) DEFAULT NULL,
-    `PaymentBlockingReason`      tinyint(1) DEFAULT NULL,
+    `HeaderPaymentBlockStatus`   tinyint(1) DEFAULT NULL,
     `ExternalReferenceDocument`  varchar(35) DEFAULT NULL,
     `DocumentHeaderText`         varchar(200) DEFAULT NULL,
     
@@ -36,7 +36,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataBillFromParty_fk` FOREIGN KEY (`BillFromParty`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderBillToCountry_fk` FOREIGN KEY (`BillToCountry`) REFERENCES `data_platform_country_country_data` (`Country`),
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderBillFromCountry_fk` FOREIGN KEY (`BillFromCountry`) REFERENCES `data_platform_country_country_data` (`Country`),
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataTransactionCurrency_fk` FOREIGN KEY (`TransactionCurrency`) REFERENCES `data_platform_currency_currency_data` (`Currency`),    
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataTxCurrency_fk` FOREIGN KEY (`TransactionCurrency`) REFERENCES `data_platform_currency_currency_data` (`Currency`),    
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataIncoterms_fk` FOREIGN KEY (`Incoterms`) REFERENCES `data_platform_incoterms_incoterms_data` (`Incoterms`),
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataPaymentTerms_fk` FOREIGN KEY (`PaymentTerms`) REFERENCES `data_platform_payment_terms_payment_terms_data` (`PaymentTerms`),
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataPaymentMethod_fk` FOREIGN KEY (`PaymentMethod`) REFERENCES `data_platform_payment_method_payment_method_data` (`PaymentMethod`)
