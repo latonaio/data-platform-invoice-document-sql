@@ -3,10 +3,12 @@ CREATE TABLE `data_platform_invoice_document_header_data`
     `InvoiceDocument`            int(16) NOT NULL,
     `CreationDate`               date DEFAULT NULL,
     `LastChangeDate`             date DEFAULT NULL,
-    `BillToParty`                int(12) DEFAULT NULL,
     `BillFromParty`              int(12) DEFAULT NULL,
-    `BillToCountry`              varchar(3) DEFAULT NULL,
+    `BillToParty`                int(12) DEFAULT NULL,
     `BillFromCountry`            varchar(3) DEFAULT NULL,
+    `BillToCountry`              varchar(3) DEFAULT NULL,
+    `Payer`                      int(12) DEFAULT NULL,
+    `Payee`                      int(12) DEFAULT NULL,
     `InvoiceDocumentDate`        date DEFAULT NULL,
     `InvoiceDocumentTime`        time DEFAULT NULL,
     `InvoicePeriodStartDate`     date DEFAULT NULL,
@@ -32,14 +34,16 @@ CREATE TABLE `data_platform_invoice_document_header_data`
     
     PRIMARY KEY (`InvoiceDocument`),
     
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataBillToParty_fk` FOREIGN KEY (`BillToParty`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataBillFromParty_fk` FOREIGN KEY (`BillFromParty`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderBillToCountry_fk` FOREIGN KEY (`BillToCountry`) REFERENCES `data_platform_country_country_data` (`Country`),
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDataBillFromParty_fk` FOREIGN KEY (`BillFromParty`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDataBillToParty_fk` FOREIGN KEY (`BillToParty`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
     CONSTRAINT `DataPlatformInvoiceDocumentHeaderBillFromCountry_fk` FOREIGN KEY (`BillFromCountry`) REFERENCES `data_platform_country_country_data` (`Country`),
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataTxCurrency_fk` FOREIGN KEY (`TransactionCurrency`) REFERENCES `data_platform_currency_currency_data` (`Currency`),    
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataIncoterms_fk` FOREIGN KEY (`Incoterms`) REFERENCES `data_platform_incoterms_incoterms_data` (`Incoterms`),
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataPaymentTerms_fk` FOREIGN KEY (`PaymentTerms`) REFERENCES `data_platform_payment_terms_payment_terms_data` (`PaymentTerms`),
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderPartnerDataPaymentMethod_fk` FOREIGN KEY (`PaymentMethod`) REFERENCES `data_platform_payment_method_payment_method_data` (`PaymentMethod`)
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderBillToCountry_fk` FOREIGN KEY (`BillToCountry`) REFERENCES `data_platform_country_country_data` (`Country`),
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDataPayer_fk` FOREIGN KEY (`Payer`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDataPayee_fk` FOREIGN KEY (`Payee`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDataTransactionCurrency_fk` FOREIGN KEY (`TransactionCurrency`) REFERENCES `data_platform_currency_currency_data` (`Currency`),    
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDataIncoterms_fk` FOREIGN KEY (`Incoterms`) REFERENCES `data_platform_incoterms_incoterms_data` (`Incoterms`),
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDataPaymentTerms_fk` FOREIGN KEY (`PaymentTerms`) REFERENCES `data_platform_payment_terms_payment_terms_data` (`PaymentTerms`),
+    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDataPaymentMethod_fk` FOREIGN KEY (`PaymentMethod`) REFERENCES `data_platform_payment_method_payment_method_data` (`PaymentMethod`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
