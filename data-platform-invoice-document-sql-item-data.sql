@@ -71,6 +71,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `TaxCode`                           varchar(2) DEFAULT NULL,
     `TaxRate`                           float(6) DEFAULT NULL,
     `CountryOfOrigin`                   varchar(3) DEFAULT NULL,
+    `ItemPaymentRequisitionIsCreated`       tinyint(1) DEFAULT NULL,    
 
     PRIMARY KEY (`InvoiceDocument`, `InvoiceDocumentItem`),
     
