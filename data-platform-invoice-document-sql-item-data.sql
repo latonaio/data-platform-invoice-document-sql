@@ -42,6 +42,8 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `ItemGrossWeight`                   float(15) DEFAULT NULL,
     `ItemNetWeight`                     float(15) DEFAULT NULL,
     `ItemWeightUnit`                    varchar(3) DEFAULT NULL,
+    `ItemVolume`                        float(15) DEFAULT NULL,
+    `ItemVolumeUnit`                    varchar(3) DEFAULT NULL,
     `NetAmount`                         float(13) DEFAULT NULL,
     `TaxAmount`                         float(13) DEFAULT NULL,
     `GrossAmount`                       float(13) DEFAULT NULL,
@@ -87,3 +89,4 @@ CREATE TABLE `data_platform_invoice_document_item_data`
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
+
