@@ -2,7 +2,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
 (
     `InvoiceDocument`                   int(16) NOT NULL,
     `InvoiceDocumentItem`               int(6) NOT NULL,
-    `DocumentItemCategory`              varchar(4) DEFAULT NULL,
+    `InvoiceDocumentItemCategory`       varchar(4) DEFAULT NULL,
     `InvoiceDocumentItemText`           varchar(200) DEFAULT NULL,
     `InvoiceDocumentItemTextByBuyer`    varchar(200) NOT NULL,
     `InvoiceDocumentItemTextBySeller`   varchar(200) NOT NULL,
@@ -105,4 +105,3 @@ CREATE TABLE `data_platform_invoice_document_item_data`
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
-

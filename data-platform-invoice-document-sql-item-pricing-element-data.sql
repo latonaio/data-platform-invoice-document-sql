@@ -2,7 +2,6 @@ CREATE TABLE `data_platform_invoice_document_item_pricing_element_data`
 (
   `InvoiceDocument`             int(16) NOT NULL,
   `InvoiceDocumentItem`         int(6) NOT NULL,
-  `PricingProcedureStep`        int(3) NOT NULL,
   `PricingProcedureCounter`     int(3) NOT NULL,
   `ConditionType`               varchar(4) DEFAULT NULL,
   `PricingDate`                 date DEFAULT NULL,

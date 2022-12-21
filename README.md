@@ -9,7 +9,7 @@ https://api.xxx.com/api/API_XXXXX_XXX/overview
 data-platform-invoice-document-sql には、sqlの設定ファイルとして、以下のファイルが含まれています。  
 
 * data-platform-invoice-document-sql-header-data.sql（データ連携基盤 請求伝票 - ヘッダデータ）
-* data-platform-invoice-document-sql-header-pdf-data.sql（データ連携基盤 請求伝票 - ヘッダPDFデータ）
+* data-platform-invoice-document-sql-header-doc-data.sql（データ連携基盤 請求伝票 - ヘッダ文書データ）
 * data-platform-invoice-document-sql-header-partner-data.sql（データ連携基盤 請求伝票 - ヘッダ取引先データ）
 * data-platform-invoice-document-sql-header-partner-contact-data.sql（データ連携基盤 請求伝票 - ヘッダ取引先コンタクトデータ）
 * data-platform-invoice-document-sql-item-data.sql（データ連携基盤 請求伝票 - 明細データ）
